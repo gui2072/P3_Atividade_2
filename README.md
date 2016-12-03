@@ -1,4 +1,4 @@
-# P3_Atividade_2	
+# P3_Estrutura_de_dados_Atividade_2	
 Atividade 2, Estagio 3, Período 3 		
 
 Prática ÁRVORES		
