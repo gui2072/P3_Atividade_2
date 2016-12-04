@@ -1,4 +1,65 @@
-#include "lib.h"
+#include "head.h"
+
+#ifdef WIN32
+#include <windows.h>
+void gotoxy(int x, int y) {
+    COORD point;
+    point.X = x;
+    point.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), point);
+}
+#else
+void gotoxy(int x, int y) {
+    printf("\033[%d;%df", y, x);
+    fflush(stdout);
+}
+#endif
+
+// Exibir a arvore - Procedimento recursivo, usando um percurso pre-ordem.
+// sugestao de uso: exibirGraficamente(arvore, 10, 10, 3);
+void exibirGraficamente(t_arvore tree, int col, int lin, int desloc) {
+    // col e lin sao as coordenadas da tela onde a arvore ira iniciar,
+    // ou seja, a posicao da raiz, e desloc representa o deslocamento na tela
+    // (em colunas) de um no em relacao ao no anterior.
+    if (tree == NULL)
+        return; // condicao de parada do procedimento recursivo
+    gotoxy(col,lin);
+    printf("%d",tree->dado.nome);
+    if (tree->esq != NULL) {
+        gotoxy(col-1,lin+1);
+        printf("/");
+        exibirGraficamente(tree->esq,col-desloc,lin+2,desloc/2+2);
+    }
+    if (tree->dir != NULL){
+        gotoxy(col+3,lin+1);
+        printf("\\");
+        exibirGraficamente(tree->dir,col+desloc,lin+2,desloc/2+2);
+    }
+}
+
+void exibirPreOrdem(t_arvore tree) {
+    if (tree!=NULL) {
+        printf("%d ", tree->dado.nome);
+        exibirPreOrdem(tree->esq);
+        exibirPreOrdem(tree->dir);
+    }
+}
+
+void exibirInOrdem(t_arvore tree) {
+    if (tree!=NULL) {
+        exibirInOrdem(tree->esq);
+        printf("%d ", tree->dado.nome);
+        exibirInOrdem(tree->dir);
+    }
+}
+
+void exibirPosOrdem(t_arvore tree){
+    if (tree!=NULL) {
+        exibirPosOrdem(tree->esq);
+        exibirPosOrdem(tree->dir);
+        printf("%d ", tree->dado.nome);
+    }
+}
 
 void esvaziar(t_arvore *tree) {
     if (*tree == NULL)
@@ -10,12 +71,12 @@ void esvaziar(t_arvore *tree) {
 }
 
 // isVazia - testa se um no eh vazio
-int isVazia (t_no * no) {
+int isVazia(t_no * no) {
     return (no == NULL);
 }
 
 // Cria um no vazio
-t_no * criar () {
+t_no * criar() {
     t_no * no = (t_no*) malloc(sizeof(t_no));
 
     if (no)
@@ -64,7 +125,7 @@ t_no * buscaSetPai(t_arvore tree, t_elemento dado, t_no ** pai) {
     }
 }
 
-int inserir (t_arvore *tree, t_elemento item) {
+int inserir(t_arvore *tree, t_elemento item) {
     int ok;
     // se a raiz for nula, entao insere na raiz
     if (*tree == NULL) {

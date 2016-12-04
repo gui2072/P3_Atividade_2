@@ -3,14 +3,19 @@
 #include <string.h>
 #include <stdlib.h>
 
+// Define's
+#define FILE_NAME "dados.csv"
+
 // Verificar em qual sistema esta sendo compilado
 #if defined(_WIN32) || defined(WIN32) // Windows
 #define flush fflush(stdin)
 #define clear system("cls")
+#define COL 38
 #else							      // Linux
 #include <stdio_ext.h>
 #define flush __fpurge(stdin)
 #define clear system("clear")
+#define COL 65
 #endif
 
 // Typedef's
@@ -34,3 +39,15 @@ typedef struct noP{
 typedef t_pilha * pilha;
 
 // Sub rotinas
+void pause();
+void openFile(t_arvore *avr);
+void gotoxy(int x, int y);
+void exibirGraficamente(t_arvore tree, int col, int lin, int desloc);
+void exibirPreOrdem(t_arvore tree);
+void exibirInOrdem(t_arvore tree);
+void exibirPosOrdem(t_arvore tree);
+void esvaziar(t_arvore *tree);
+int isVazia(t_no *no);
+int compara(t_elemento dado1, t_elemento dado2);
+int inserir(t_arvore *tree, t_elemento item);
+t_no *criar();

@@ -1,14 +1,14 @@
-#include "lib.h"
+#include "head.h"
 
-int openFile(t_arvore * avr){
+void openFile(t_arvore * avr){
     t_elemento dado;
+    FILE *open = fopen(FILE_NAME,"r");
 
-    FILE *open = fopen("Input.csv","r");
-
-    while(fscanf(open,"%d",&dado.nome)==1){
-        inserir(avr,dado);
-        fgetc(open);
+    if (open != NULL) {
+        while(fscanf(open,"%d",&dado.nome)==1){
+            inserir(avr,dado);
+            fgetc(open);
+        }
+        fclose(open);
     }
-
-    fclose(open);
 }
