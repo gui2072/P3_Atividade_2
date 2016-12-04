@@ -85,16 +85,19 @@ t_no * criar() {
     return no;
 }
 
-t_no * busca(t_arvore tree, t_elemento dado) {
+t_no * busca(t_arvore tree, t_elemento dado){
+    t_no* achou;
     if (tree == NULL)
         return NULL;
     if (compara(tree->dado, dado)==0)
         return tree;
 
-    if (compara(tree->dado, dado)>0)
-        return busca(tree->esq, dado);
-    else
-        return busca(tree->dir, dado);
+    achou = busca(tree->esq, dado);
+
+    if (achou == NULL)
+        achou = busca(tree->dir, dado);
+
+    return achou;
 }
 
 int compara(t_elemento dado1, t_elemento dado2) {
@@ -106,6 +109,7 @@ int compara(t_elemento dado1, t_elemento dado2) {
         return -1;
     }
 }
+
 t_no * buscaSetPai(t_arvore tree, t_elemento dado, t_no ** pai) {
 
     if (tree == NULL) {
