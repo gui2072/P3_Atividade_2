@@ -43,7 +43,7 @@ int main(int argc, char const *argv[]) {
                 elemento.nome = inputInt("  Remover apenas um nó\n","  Digite o elemento: ");
                 if (busca(avr, elemento)){
                     while (1){
-                        printf("\n  Inserir\n\n  O elemento %d estar na árvore\n  Deseja inserir o elemento na árvore\n\n   S - Sim\n   N - Não\n\n  Digite uma opção: ", elemento.nome);
+                        printf("\n  Remover\n\n  O elemento %d estar na árvore\n  Deseja remover o elemento na árvore\n\n   S - Sim\n   N - Não\n\n  Digite uma opção: ", elemento.nome);
                         input = getchar();
                         flush;
                         clear;
@@ -76,14 +76,23 @@ int main(int argc, char const *argv[]) {
                 break;
             case '4':
                 clear;
-                printf("\n  Esvaziar a árvore\n");
                 if (isVazia(avr)){
-                    printf("\n  A árvore esta vazia");
+                    printf("\n  Esvaziar a árvore\n\n  A árvore esta vazia");
+                    pause();
                 } else {
-                    esvaziar(&avr);
-                    printf("\n  A árvore foi esvaziada");
+                    while (1){
+                        printf("\n  Esvaziar a árvore\n\n  Deseja esvaziar a árvore\n\n   S - Sim\n   N - Não\n\n  Digite uma opção: ");
+                        input = getchar();
+                        flush;
+                        clear;
+                        if (input == 's' || input == 'S'){
+                            esvaziar(&avr);
+                            break;
+                        } else if (input == 'n' || input == 'N'){
+                            break;
+                        }
+                    }
                 }
-                pause();
                 break;
             case '5':
                 clear;
