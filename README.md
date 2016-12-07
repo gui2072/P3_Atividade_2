@@ -1,6 +1,9 @@
 # P3_Estrutura_de_dados_Atividade_2	
 Atividade 2, Estagio 3, Período 3 		
 
+Nome: Paulo Guilherme Venancio da Silva		
+Link repositorio: https://github.com/gui2072/P3_Estrutura_de_dados_Estagio-3_Atividade-2		
+
 Prática ÁRVORES		
 
 Estrutura de Dados	
@@ -35,4 +38,4 @@ OPÇÕES:
 a) a opção 1, inserir, deve inserir um elemento segundo as regras de árvore binária de pesquisa.				
 b) a opção 2, remover, deve pegar o conteúdo do nó a ser removido. Caso não exista, dar mensagem correspondente.				
 b) a opção 3, pesquisar, deve dizer se o dado armazenado no t_elemento está presente ou não na árvore.				
-c) a opção 5, exibir, deve exibir em todas as formas, pré/in/pós-ordem e graficamente, ambos os dados existentes no t_elemento.				
+c) a opção 5, exibir, deve exibir em todas as formas, pré/in/pós-ordem e graficamente, ambos os dados existentes no t_elemento.		
