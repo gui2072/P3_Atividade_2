@@ -31,12 +31,6 @@ typedef struct no {
 
 typedef t_no* t_arvore;
 
-typedef struct noP{
-    t_no * noArv;
-    struct noP * prox;
-}t_pilha;
-
-typedef t_pilha * pilha;
 
 // Sub rotinas
 void pause();
