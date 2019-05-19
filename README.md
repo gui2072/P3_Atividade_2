@@ -1,12 +1,9 @@
-# Unipe - P3 -  Estrutura de dados I  
-### Período 3, Estágio 3, Atividade 2
-[Repositório](https://github.com/gui9394/P3_EstruturaDeDados_ES3_AT2)
-
-Árvores binárias de pesquisa  
+# Unipe - P3 -  Estrutura de dados I
+## Árvore binária de pesquisa  
 Professor: Walace Bonfim  
 Aluno: Paulo Silva  
+[Repositório do projeto](https://github.com/gui9394/Unipe_P3_EstruturaDados)  
 
-Atividade prática de árvores
 
 Faça um programa em C, que:
 1. Crie uma árvore binária de pesquisa do tipo "t_arvore", implementando-a de forma encadeada, com o conteúdo lido do arquivo de entrada de dados.
