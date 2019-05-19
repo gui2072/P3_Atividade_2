@@ -1,11 +1,11 @@
-# Unipe - P3 -  Estrutura de dados I
-## Árvore binária de pesquisa  
+# Árvore binária de pesquisa  
+Unipe - P3 -  Estrutura de dados I  
 Professor: Walace Bonfim  
-Aluno: Paulo Silva  
-[Repositório do projeto](https://github.com/gui9394/Unipe_P3_EstruturaDados)  
+Repositório: [GitHub](https://github.com/gui9394/Unipe_P3_EstruturaDados)  
 
 
-Faça um programa em C, que:
+## Descrição
+### Requisitos:
 1. Crie uma árvore binária de pesquisa do tipo "t_arvore", implementando-a de forma encadeada, com o conteúdo lido do arquivo de entrada de dados.
 2. O "t_elemento" da árvore deverá ser uma estrutura que armazene o endereço do nó e o dado que será lido do arquivo de entrada.
 3. Exiba o seguinte menu de opções:
@@ -30,7 +30,7 @@ Professor: Walace Bonfim
 6. Execute a opção escolhida pelo usuário.
 7. Após a execução de cada opção, o programa deve retornar ao menu para nova opção do usuário ou o encerramento do programa.
 
-Opções:				
+### Opções  
 1. Inserir, deve inserir um elemento segundo as regras de árvore binária de pesquisa.
 2. Remover, deve pegar o conteúdo do nó a ser removido. Caso não exista, dar mensagem correspondente.
 3. Pesquisar, deve dizer se o dado armazenado no t_elemento está presente ou não na árvore.
