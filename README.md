@@ -1,41 +1,41 @@
-# P3_Estrutura_de_dados_Atividade_2	
-Atividade 2, Estagio 3, Período 3 		
+# Unipe - P3 -  Estrutura de dados I  
+### Período 3, Estágio 3, Atividade 2
+[Repositório](https://github.com/gui9394/P3_EstruturaDeDados_ES3_AT2)
 
-Nome: Paulo Guilherme Venancio da Silva		
-Link repositorio: https://github.com/gui2072/P3_Estrutura_de_dados_Estagio-3_Atividade-2		
+Árvores binárias de pesquisa  
+Professor: Walace Bonfim  
+Aluno: Paulo Silva  
 
-Prática ÁRVORES		
+Atividade prática de árvores
 
-Estrutura de Dados	
-Árvores Binárias de Pesquisa	
+Faça um programa em C, que:
+1. Crie uma árvore binária de pesquisa do tipo "t_arvore", implementando-a de forma encadeada, com o conteúdo lido do arquivo de entrada de dados.
+2. O "t_elemento" da árvore deverá ser uma estrutura que armazene o endereço do nó e o dado que será lido do arquivo de entrada.
+3. Exiba o seguinte menu de opções:
+```
+Aluno: Nome completo do aluno
+Disciplina: Estrutura de dados I
 Professor: Walace Bonfim
 
-1) Faça um programa em C, que: 				
-a) crie uma árvore BINÁRIA DE PESQUISA do tipo t_arvore, implementando-a de forma encadeada, com o conteúdo lido do arquivo de entrada de dados.			
-b) o t_elemento da árvore deverá ser uma estrutura que armazene o endereço do nó e o dado que será lido do arquivo de entrada					
-c) exiba o seguinte menu de opções: 			
-	
-	ALUNO: NOME COMPLETO DO ALUNO	
-	DISCIPLINA: ESTRUTURA DE DADOS I	
-	PROFESSOR: WALACE BONFIM	
-	
-				EDITOR DE ÁRVORE 	
-	1 – INSERIR	
-	2 – REMOVER APENAS UM NÓ		
-	3 – PESQUISAR		
-	4 – ESVAZIAR A ÁRVORE			
-	5 – EXIBIR A ÁRVORE		
-	0 – SAIR	
+	Editor de árvore
 
-		DIGITE SUA OPÇÃO: 
+ 1 - Inserir
+ 2 - Remover apenas um nó
+ 3 - Pesquisar
+ 4 - Esvaziar a árvore
+ 5 - Exibir a árvore
+ 0 - Sair
 
-c) a árvore inicial deve ser gerada em memória a partir dos dados armazenado em um ARQUIVO de texto (no formato csv que separa as entradas por vírgulas).			
-d) leia a opção do usuário; 						
-e) execute a opção escolhida pelo usuário; 					
-f) após a execução de cada opção, o programa deve retornar ao menu para nova opção do usuário ou o encerramento do programa.					
+	Digite sua opção:
+```
+4. A árvore inicial deve ser gerada em memória a partir dos dados armazenado em um arquivo de texto (no formato csv que separa as entradas por vírgulas).
+5. Leia a opção do usuário.
+6. Execute a opção escolhida pelo usuário.
+7. Após a execução de cada opção, o programa deve retornar ao menu para nova opção do usuário ou o encerramento do programa.
 
-OPÇÕES:				
-a) a opção 1, inserir, deve inserir um elemento segundo as regras de árvore binária de pesquisa.				
-b) a opção 2, remover, deve pegar o conteúdo do nó a ser removido. Caso não exista, dar mensagem correspondente.				
-b) a opção 3, pesquisar, deve dizer se o dado armazenado no t_elemento está presente ou não na árvore.				
-c) a opção 5, exibir, deve exibir em todas as formas, pré/in/pós-ordem e graficamente, ambos os dados existentes no t_elemento.		
+Opções:				
+1. Inserir, deve inserir um elemento segundo as regras de árvore binária de pesquisa.
+2. Remover, deve pegar o conteúdo do nó a ser removido. Caso não exista, dar mensagem correspondente.
+3. Pesquisar, deve dizer se o dado armazenado no t_elemento está presente ou não na árvore.
+4. Esvaziar, deve apagar todos os nós da árvore.
+5. Exibir, deve exibir em todas as formas, pré/in/pós-ordem e graficamente, ambos os dados existentes no t_elemento.
